@@ -80,6 +80,7 @@ class vect_queue
     }
 };
 
+// tester code
 int main()
 {
     //Demonstrate your code works by adding/removing values in a vect_que class 
@@ -90,6 +91,7 @@ int main()
     // create a class object
     vect_queue<int> v;
     
+    //case 1:
     //add to an empty queue
     cout << "\nAdding to empty queue\n";
     v.enque(1);
@@ -97,13 +99,23 @@ int main()
     cout << "Front index: " << v.que_front_ << endl;
     cout << "Back index : " << v.que_back_ << endl;
     
+    //case2:
     //add to a non-empty queue without jump 
+    cout << "\nAdding to non-empty queue\n";
+    v.enque(1);
+    v.print_vect();
+    cout << "Front index: " << v.que_front_ << endl;
+    cout << "Back index : " << v.que_back_ << endl;
+    
+    //case 3:
+    //add to a non-empty queue with jump 
     cout << "\nAdding to non-empty queue\n";
     v.enque(2);
     v.print_vect();
     cout << "Front index: " << v.que_front_ << endl;
     cout << "Back index : " << v.que_back_ << endl;
-
+    
+    //case 4 & 5:
     //remove from a queue with number of elements > 1 
     //and que.front not at vect.back
     cout << "\nRemoving from queue with > 1 elements\n";
@@ -112,7 +124,7 @@ int main()
     cout << "Front index: " << v.que_front_ << endl;
     cout << "Back index : " << v.que_back_ << endl;
 
-
+    //case 6:
     //remove from a queue with 1 element in it and que.front 
     cout << "\nRemoving from queue with 1 element\n";
     v.dequeue();
@@ -124,5 +136,3 @@ int main()
     
     return 0;
 }
-
-
